@@ -24,7 +24,7 @@ Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca 
 - Przypisywanie użytkowników do ról
 - Prosty system zarządzania kategoriami produktów
 
-## Requirements
+## Wymagania
 
 - PHP 8.1 lub nowsza
 - Composer
