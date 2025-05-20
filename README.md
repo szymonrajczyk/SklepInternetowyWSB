@@ -6,7 +6,7 @@
 
 ## Opis projektu
 
-Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca zarządzanie produktami, użytkownikami oraz procesem zakupowym. System został wyposażony w kontrolę dostępu opartą na rolach i posiada trzy typy użytkowników:
+Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca zarządzanie produktami, użytkownikami oraz procesem zakupowym. System został wyposażony w kontrolę dostępu opartą na rolach i posiada trzy typy zalogowanych użytkowników oraz gościa:
 
 - **Admin**: Zarządzanie użytkownikami, produktami, kategoriami oraz zamówieniami
 - **Sprzedający**: Użytkownik wystawiający ogłoszenia
