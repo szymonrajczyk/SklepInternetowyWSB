@@ -90,7 +90,7 @@ php artisan serve
 
 Otwórz przeglądarkę: http://localhost:8000
 
-## Default Login Credentials
+## Domyślne dane logowania
 
 - **Admin User**:
   - Email: admin@admin.pl
