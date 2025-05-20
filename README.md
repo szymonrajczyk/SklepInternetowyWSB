@@ -4,7 +4,7 @@
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
 </p>
 
-## Project Overview
+## Opis projektu
 
 Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca zarządzanie produktami, użytkownikami oraz procesem zakupowym. System został wyposażony w kontrolę dostępu opartą na rolach i posiada trzy typy użytkowników:
 
