@@ -1,66 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sklep internetowy WSB
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
 </p>
 
-## About Laravel
+## Project Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca zarządzanie produktami, użytkownikami oraz procesem zakupowym. System został wyposażony w kontrolę dostępu opartą na rolach i posiada trzy typy użytkowników:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Admin**: Zarządzanie użytkownikami, produktami, kategoriami oraz zamówieniami
+- **Sprzedający**: Użytkownik wystawiający ogłoszenia
+- **Kupujący**: Użytkownik mogący składać zamówienia
+- **Gość**: Niezalogowany użytkownik mogący przeglądać ogłoszenia
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Funkcjonalności
 
-## Learning Laravel
+- Rejestracja i logowanie z kontrolą ról
+- Zarządzanie produktami (dodawanie, edycja, usuwanie)
+- Obsługa koszyka (przechowywany w sesji)
+- Składanie zamówień przez klientów
+- Panel administracyjny z podglądem użytkowników i zamówień
+- Walidacja formularzy (np. rejestracja, dodawanie produktów)
+- Przypisywanie użytkowników do ról
+- Prosty system zarządzania kategoriami produktów
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Requirements
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP 8.1 lub nowsza
+- Composer
+- MySQL lub inna baza danych wspierana przez Laravel
+- Node.js i npm
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Instalacja
 
-## Laravel Sponsors
+### Krok 1: Klonowanie Repozytorium
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+git clone <repository-url>
+cd SklepInternetowyWSB
+```
 
-### Premium Partners
+### Krok 2: Instalacja zależności
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+composer install
+npm install --force
+npm run dev
+```
 
-## Contributing
+### Krok 3: Konfiguracja środowiska
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-## Code of Conduct
+Edytuj plik .env, aby skonfigurować połączenie z bazą danych:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=wsb_2024_k07_P9
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## Security Vulnerabilities
+### Krok 4: Migracja i dane testowe
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan migrate --seed
+```
 
-## License
+Zostaną utworzone tabele i załadowane dane startowe:
+- Domyślni użytkownicy (admin)
+- Przykładowe produkty
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Krok 5: Utwórz symlink do katalogu przechowywania
+
+```bash
+php artisan storage:link
+```
+
+## Uruchomienie aplikacji
+
+```bash
+php artisan serve
+```
+
+Otwórz przeglądarkę: http://localhost:8000
+
+## Default Login Credentials
+
+- **Admin User**:
+  - Email: admin@admin.pl
+  - Hasło: admin123
+
+## Autorzy
+
+- Szymon Rajczyk
+- Hubert Bałuszyński
+- Mikołaj Czajkowski
+

@@ -148,11 +148,12 @@
                     </div>
                     <div class="col-md-4">
                         <h5>Kontakt</h5>
-                        <address>
+                        <div>
                             <strong>{{ config('app.name', 'Laravel') }}</strong><br>
                             Szymon Rajczyk<br>
                             Hubert Bałuszyński<br>
-                        </address>
+                            Mikołaj Czajkowski<br>
+                    </div>
                     </div>
                 </div>
                 <div class="row">
