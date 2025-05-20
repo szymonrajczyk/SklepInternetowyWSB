@@ -37,7 +37,7 @@ Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca 
 
 ```bash
 git clone <repository-url>
-cd SklepInternetowyWSB
+cd [nazwa_folderu]
 ```
 
 ### Krok 2: Instalacja zależności
