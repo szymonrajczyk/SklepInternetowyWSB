@@ -1,12 +1,14 @@
 # Sklep internetowy WSB
 
+Projekt dostępny na github: https://github.com/szymonrajczyk/SklepInternetowyWSB/
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
 </p>
 
-## Project Overview
+## Opis projektu
 
-Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca zarządzanie produktami, użytkownikami oraz procesem zakupowym. System został wyposażony w kontrolę dostępu opartą na rolach i posiada trzy typy użytkowników:
+Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca zarządzanie produktami, użytkownikami oraz procesem zakupowym. System został wyposażony w kontrolę dostępu opartą na rolach i posiada trzy typy zalogowanych użytkowników oraz gościa:
 
 - **Admin**: Zarządzanie użytkownikami, produktami, kategoriami oraz zamówieniami
 - **Sprzedający**: Użytkownik wystawiający ogłoszenia
@@ -24,7 +26,7 @@ Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca 
 - Przypisywanie użytkowników do ról
 - Prosty system zarządzania kategoriami produktów
 
-## Requirements
+## Wymagania
 
 - PHP 8.1 lub nowsza
 - Composer
@@ -37,7 +39,7 @@ Ten Sklep Internetowy to aplikacja webowa stworzona w Laravelu, umożliwiająca 
 
 ```bash
 git clone <repository-url>
-cd SklepInternetowyWSB
+cd [nazwa_folderu]
 ```
 
 ### Krok 2: Instalacja zależności
@@ -58,6 +60,8 @@ php artisan key:generate
 Edytuj plik .env, aby skonfigurować połączenie z bazą danych:
 
 ```
+APP_NAME=SklepWSB
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -90,7 +94,7 @@ php artisan serve
 
 Otwórz przeglądarkę: http://localhost:8000
 
-## Default Login Credentials
+## Domyślne dane logowania
 
 - **Admin User**:
   - Email: admin@admin.pl
