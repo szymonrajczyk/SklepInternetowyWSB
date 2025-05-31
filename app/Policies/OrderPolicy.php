@@ -10,9 +10,6 @@ class OrderPolicy
 {
     use HandlesAuthorization;
 
-    /**
-     * Allow admins to do everything
-     */
     public function before(User $user, $ability)
     {
         if ($user->isAdmin()) {
@@ -20,9 +17,6 @@ class OrderPolicy
         }
     }
 
-    /**
-     * Determine whether the user can view the order.
-     */
     public function view(User $user, Order $order)
     {
         if ($user->id === $order->user_id) {
@@ -44,9 +38,6 @@ class OrderPolicy
         return false;
     }
 
-    /**
-     * Determine whether the user can update the order status.
-     */
     public function update(User $user, Order $order)
     {
 

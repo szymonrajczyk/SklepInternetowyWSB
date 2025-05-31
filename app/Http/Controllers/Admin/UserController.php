@@ -43,7 +43,7 @@ class UserController extends Controller
         ]);
 
         return redirect()->route('admin.users.index')
-            ->with('success', 'User created successfully.');
+            ->with('success', 'Pomyślnie utworzono konto użytkownika.');
     }
 
     public function show(User $user)
@@ -80,19 +80,19 @@ class UserController extends Controller
         $user->update($validated);
 
         return redirect()->route('admin.users.index')
-            ->with('success', 'User updated successfully.');
+            ->with('success', 'Pomyślnie zaktualizowano konto użytkownika.');
     }
 
     public function destroy(User $user)
     {
         if ($user->id === auth()->id()) {
             return redirect()->route('admin.users.index')
-                ->with('error', 'You cannot delete your own account.');
+                ->with('error', 'Nie możesz usunąć swojego konta.');
         }
 
         $user->delete();
 
         return redirect()->route('admin.users.index')
-            ->with('success', 'User deleted successfully.');
+            ->with('success', 'Pomyślnie usunięto konto użytkownika.');
     }
 }
